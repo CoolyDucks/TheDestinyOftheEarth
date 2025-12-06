@@ -2,60 +2,40 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>The Destiny V1.1 - Retro Aero</title>
+<title>The Destiny v1.1 - CoolyDucks</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Splash Menu -->
 <div id="mainMenu">
   <h1>The Destiny of The Earth</h1>
-  <button id="startBtn">Start Game</button>
+  <div id="tips"></div>
+  <button id="storyBtn">Story Mode</button>
   <button id="settingsBtn">Settings</button>
-  <div class="version">VERSION 1.1</div>
 </div>
 
+<!-- Settings -->
 <div id="settingsMenu" class="hidden">
   <h2>Settings</h2>
   <button id="volUpBtn">Volume +</button>
   <button id="volDownBtn">Volume -</button>
-  <button id="backMenuBtn">Back</button>
+  <button id="backMenuBtn">Back to Menu</button>
 </div>
 
+<!-- Game Canvas -->
 <canvas id="gameCanvas" width="600" height="450" class="hidden"></canvas>
+
+<!-- Controls -->
 <div id="controls" class="hidden">
-  <button id="leftBtn">⬅️</button>
-  <button id="shootBtn">⚡</button>
-  <button id="rightBtn">➡️</button>
+  <button id="leftBtn">⬅️ Left</button>
+  <button id="shootBtn">⚡ Shoot</button>
+  <button id="rightBtn">➡️ Right</button>
 </div>
 
-<div class="version-canvas">VERSION 1.1</div>
+<!-- VERSION label -->
+<div class="version-label">VERSION 1.1</div>
 
 <script src="game.js"></script>
-</body>
-</html>    <h1>The Destiny of The Earth</h1>
-    <div id="tips"></div>
-    <button id="storyBtn">Story Mode</button>
-    <button id="settingsBtn">Settings</button>
-  </div>
-
-  <div id="settingsMenu" class="hidden">
-    <h2>Settings</h2>
-    <button id="volUpBtn">Volume +</button>
-    <button id="volDownBtn">Volume -</button>
-    <button id="loadModBtn">Load Mod JS</button>
-    <button id="cheatBtn">Enter Cheat Code</button>
-    <button id="backMenuBtn">Back to Menu</button>
-  </div>
-
-  <canvas id="gameCanvas" width="600" height="450" class="hidden"></canvas>
-  <canvas id="miniMap" width="225" height="90" class="hidden"></canvas>
-
-  <div id="controls" class="hidden">
-    <button id="leftBtn">⬅️ Left</button>
-    <button id="shootBtn">⚡ Shoot</button>
-    <button id="rightBtn">➡️ Right</button>
-  </div>
-
-  <script src="game.js"></script>
 </body>
 </html>
