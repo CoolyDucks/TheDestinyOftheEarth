@@ -1,72 +1,109 @@
-(function(){
-  const body = document.body;
-  const splash = document.getElementById("splash");
-  const licence = document.getElementById("licence");
-  const mainMenu = document.getElementById("mainMenu");
-  const settingsMenu = document.getElementById("settingsMenu");
-  const canvas = document.getElementById("gameCanvas");
-  const ctx = canvas.getContext("2d");
-  const mini = document.getElementById("miniMap");
-  const mctx = mini.getContext("2d");
-  const controls = document.getElementById("controls");
+/* ====== الجسم الأساسي ====== */
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0b0b45, #000020);
+  color: #00fffc;
+  font-family: 'Press Start 2P', monospace;
+  text-align: center;
+  overflow: hidden;
+  filter: contrast(150%) saturate(140%) brightness(120%);
+}
 
-  const doomShoot = new Audio("https://www.soundjay.com/mechanical/sounds/mechanical-gun-01.ogg");
-  const doomKill  = new Audio("https://www.soundjay.com/mechanical/sounds/mechanical-hit-01.ogg");
+/* ====== Canvas ====== */
+canvas {
+  display: block;
+  margin: 10px auto;
+  background: linear-gradient(to bottom, #111 0%, #000 100%);
+  border: 6px solid #00fffc;
+  border-radius: 12px;
+  box-shadow:
+    0 0 30px #00fffc inset,
+    0 0 60px #ff00ff,
+    0 0 20px #0ff,
+    0 0 15px #fff5;
+  image-rendering: pixelated;
+}
 
-  const tipsArr = [
-    "did you no loki hate spider man",
-    "try Fortnite logo odeesy",
-    "Original game is From GitHub mean original version is from GitHub",
-    "Try X ray Ultimate in Minecraft and get banned sucker",
-    "Cj follow the train",
-    "Another Versions From Destiny is not original only GitHub"
-  ];
-  const tipsDiv = document.getElementById("tips");
-  setInterval(()=>{ 
-    tipsDiv.innerText = tipsArr[Math.floor(Math.random()*tipsArr.length)]; 
-  }, 2000);
+/* ====== الأزرار Neon AERO ====== */
+button {
+  padding: 12px 20px;
+  margin: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #00fffc;
+  background: rgba(0, 0, 50, 0.8);
+  border: 2px solid #00fffc;
+  border-radius: 14px;
+  cursor: pointer;
+  text-shadow: 0 0 8px #0ff, 0 0 15px #0ff;
+  box-shadow:
+    0 0 10px #0ff,
+    0 0 20px #00fffc,
+    0 0 30px #ff00ff inset,
+    0 0 15px #fff inset;
+  transition: all 0.2s ease-in-out;
+}
 
-  let maxHP = 3,
-      gameOver = false,
-      speed = 2,
-      score = 0,
-      gameSpeed = 1,
-      crazyMode = false,
-      message = "",
-      messageTime = 0,
-      gameStarted = false;
-  
-  let player = {
-    x: 275, y: 370,
-    w: 50, h: 50,
-    color: "#ff0",
-    hp: maxHP,
-    fatMultiplier: 1,
-    shootColor: "#ff0"
-  };
-  let ground = [], bullets = [], enemyBullets = [], enemies = [];
-  let volume = 1;
+/* Hover effect Neon Flash */
+button:hover {
+  background: rgba(0, 0, 100, 0.9);
+  box-shadow:
+    0 0 15px #0ff,
+    0 0 25px #00fffc,
+    0 0 40px #ff00ff inset,
+    0 0 25px #fff inset;
+  transform: scale(1.05);
+}
 
-  for(let i=0; i<30; i++){
-    ground.push({ x: Math.random()*560, y: Math.random()*450, w:50, h:5 });
-  }
+/* Hidden elements */
+.hidden {
+  display: none;
+}
 
-  let apiValid = false, frameCounter = 0;
+/* Splash / Licence / Menus with AERO glass effect */
+#splash, #licence, #mainMenu, #settingsMenu {
+  background: rgba(10, 10, 40, 0.7);
+  backdrop-filter: blur(8px);
+  border: 2px solid #00fffc;
+  border-radius: 20px;
+  box-shadow:
+    0 0 20px #00fffc,
+    0 0 50px #ff00ff inset;
+  padding: 20px;
+  width: 450px;
+  margin: 50px auto;
+  text-align: center;
+}
 
-  document.getElementById("apiFile").onchange = async (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    const text = await file.text();
-    if (text.includes("screenloop.ini") && text.includes("googlecode.ini") && text.includes("map.ini"))
-      apiValid = true;
-    else {
-      apiValid = false;
-      alert("API file invalid!");
-    }
-  };
+/* Meteor effects */
+.meteor {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(45deg, #fff, #00fffc);
+  border-radius: 50%;
+  opacity: 0.9;
+  box-shadow: 0 0 10px #0ff, 0 0 15px #ff0;
+  animation: meteorFlash 0.3s ease-in-out infinite alternate;
+}
 
-  function randomColor(){
-    let l = "0123456789ABCDEF";
+@keyframes meteorFlash {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.5); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+/* VERSION label */
+.version-label {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+  color: #0ff;
+  font-size: 12px;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #00fffc;
+  font-family: monospace;
+    }    let l = "0123456789ABCDEF";
     let c = "#";
     for(let i=0; i<6; i++){
       c += l[Math.floor(Math.random()*16)];
