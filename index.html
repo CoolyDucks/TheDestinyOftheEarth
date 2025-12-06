@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Destiny V1.0 - CoolyDucks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="splash">
+    <h2>The Destiny v1.0</h2>
+    <p>Requires <b>DesMatters.api</b>!</p>
+    <input type="file" id="apiFile" accept=".api"/><br>
+    <button id="startBtn">Start</button>
+    <button id="licenceBtn">Licence</button>
+  </div>
+
+  <div id="licence" class="hidden">
+    <h2>Licence - CoolyDucks</h2>
+    <p>
+      GicenseWork Licence v1.0<br>
+      Copyright © 2025 CoolyDucks<br>
+      All rights reserved.<br><br>
+
+      1. Purpose<br>
+      This licence, titled GicenseWork, is a proprietary legal framework created to protect original creative, digital, and artistic works developed by independent creators.<br>
+      It grants limited rights to users while strictly prohibiting unauthorised modification, redistribution, or commercial exploitation.<br><br>
+
+      2. Rights Granted<br>
+      Under this licence, you are permitted to:<br>
+      - Access, install, and use the software or creative work for personal or non-commercial purposes only.<br>
+      - Share the original, unmodified work freely, provided all credits and copyright notices remain intact.<br>
+      - Create non-commercial content such as gameplay videos, reviews, or commentary featuring the work.<br><br>
+
+      3. Restrictions<br>
+      The following actions are strictly prohibited:<br>
+      - Modifying, editing, reverse-engineering, or otherwise altering any part of the software, code, or assets.<br>
+      - Selling, reselling, renting, or redistributing the work, in full or in part, without written consent from the copyright holder.<br>
+      - Removing, hiding, or tampering with any copyright, author, or licence information included with the work.<br>
+      - Claiming ownership or authorship of the work, its content, or its design.<br><br>
+
+      4. Ownership and Copyright<br>
+      All intellectual property rights, trademarks, artworks, designs, and source code remain the sole property of CoolyDucks.<br>
+      This licence does not transfer ownership or imply any shared rights. Any derivative works created without explicit permission shall be considered unauthorised reproductions under international copyright law.<br><br>
+
+      5. Legal Liability<br>
+      Any breach of this licence constitutes a violation under international intellectual property law and may result in civil and/or criminal penalties.<br>
+      The licensor reserves the right to pursue full legal action in any relevant jurisdiction.<br>
+      By using this work, you agree to comply with the terms set out herein and acknowledge the authority of the GicenseWork Licence v1.0 as a binding agreement.<br><br>
+
+      6. Termination<br>
+      The licence is automatically terminated if any prohibited act occurs. Upon termination, the user must immediately cease all use, distribution, and possession of the work.<br><br>
+
+      7. Contact and Enforcement<br>
+      For permissions, commercial licensing, or infringement notices, contact: copyright@coolyducks.example<br>
+      Replace the above email with your real contact or your authorised agent's email before publishing.<br><br>
+
+      Version: GicenseWork v1.0 — Published: 2025-10-20.
+    </p>
+    <button id="licenceBackBtn">Back</button>
+  </div>
+
+  <div id="mainMenu" class="hidden">
+    <h1>The Destiny of The Earth</h1>
+    <div id="tips"></div>
+    <button id="storyBtn">Story Mode</button>
+    <button id="settingsBtn">Settings</button>
+  </div>
+
+  <div id="settingsMenu" class="hidden">
+    <h2>Settings</h2>
+    <button id="volUpBtn">Volume +</button>
+    <button id="volDownBtn">Volume -</button>
+    <button id="loadModBtn">Load Mod JS</button>
+    <button id="cheatBtn">Enter Cheat Code</button>
+    <button id="backMenuBtn">Back to Menu</button>
+  </div>
+
+  <canvas id="gameCanvas" width="600" height="450" class="hidden"></canvas>
+  <canvas id="miniMap" width="225" height="90" class="hidden"></canvas>
+
+  <div id="controls" class="hidden">
+    <button id="leftBtn">⬅️ Left</button>
+    <button id="shootBtn">⚡ Shoot</button>
+    <button id="rightBtn">➡️ Right</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
