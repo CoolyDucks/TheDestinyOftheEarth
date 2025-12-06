@@ -2,20 +2,31 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>The Destiny v1.1 - CoolyDucks</title>
+<title>The Destiny V1.1 - CoolyDucks</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Main Menu -->
-<div id="mainMenu">
+<div id="splash">
+  <h2>The Destiny v1.1</h2>
+  <button id="startBtn">Start Game</button>
+  <button id="licenceBtn">Licence</button>
+  <p class="version">VERSION 1.1</p>
+</div>
+
+<div id="licence" class="hidden">
+  <h2>Licence - CoolyDucks</h2>
+  <p>GicenseWork Licence v1.0 ... (نفس النص الموجود)</p>
+  <button id="licenceBackBtn">Back</button>
+</div>
+
+<div id="mainMenu" class="hidden">
   <h1>The Destiny of The Earth</h1>
-  <div id="tips">Press Story Mode to start!</div>
+  <div id="tips"></div>
   <button id="storyBtn">Story Mode</button>
   <button id="settingsBtn">Settings</button>
 </div>
 
-<!-- Settings -->
 <div id="settingsMenu" class="hidden">
   <h2>Settings</h2>
   <button id="volUpBtn">Volume +</button>
@@ -23,18 +34,14 @@
   <button id="backMenuBtn">Back to Menu</button>
 </div>
 
-<!-- Game Canvas -->
 <canvas id="gameCanvas" width="600" height="450" class="hidden"></canvas>
+<canvas id="miniMap" width="225" height="90" class="hidden"></canvas>
 
-<!-- Controls -->
 <div id="controls" class="hidden">
   <button id="leftBtn">⬅️ Left</button>
   <button id="shootBtn">⚡ Shoot</button>
   <button id="rightBtn">➡️ Right</button>
 </div>
-
-<!-- VERSION label -->
-<div class="version-label">VERSION 1.1</div>
 
 <script src="game.js"></script>
 </body>
