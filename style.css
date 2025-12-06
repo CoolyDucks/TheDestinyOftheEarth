@@ -1,4 +1,4 @@
-/* ====== الجسم الأساسي ====== */
+/* ====== Body ====== */
 body {
   margin: 0;
   background: radial-gradient(circle at top, #0b0b45, #000020);
@@ -24,7 +24,7 @@ canvas {
   image-rendering: pixelated;
 }
 
-/* ====== الأزرار Neon AERO ====== */
+/* ====== Buttons ====== */
 button {
   padding: 12px 20px;
   margin: 6px;
@@ -44,7 +44,6 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
-/* Hover effect Neon Flash */
 button:hover {
   background: rgba(0, 0, 100, 0.9);
   box-shadow:
@@ -55,27 +54,23 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Hidden elements */
-.hidden {
-  display: none;
-}
+/* ====== Hidden elements ====== */
+.hidden { display: none; }
 
-/* Splash / Licence / Menus with AERO glass effect */
-#splash, #licence, #mainMenu, #settingsMenu {
+/* ====== Menus AERO ====== */
+#mainMenu, #settingsMenu {
   background: rgba(10, 10, 40, 0.7);
   backdrop-filter: blur(8px);
   border: 2px solid #00fffc;
   border-radius: 20px;
-  box-shadow:
-    0 0 20px #00fffc,
-    0 0 50px #ff00ff inset;
+  box-shadow: 0 0 20px #00fffc, 0 0 50px #ff00ff inset;
   padding: 20px;
   width: 450px;
   margin: 50px auto;
   text-align: center;
 }
 
-/* Meteor effects */
+/* ====== Meteors ====== */
 .meteor {
   position: absolute;
   width: 10px;
@@ -93,7 +88,7 @@ button:hover {
   100% { transform: scale(1); opacity: 0.7; }
 }
 
-/* VERSION label */
+/* ====== VERSION label ====== */
 .version-label {
   position: absolute;
   bottom: 5px;
