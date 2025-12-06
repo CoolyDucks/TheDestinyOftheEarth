@@ -1,101 +1,48 @@
-/* ====== Body ====== */
 body {
   margin: 0;
-  background: radial-gradient(circle at top, #0b0b45, #000020);
-  color: #00fffc;
-  font-family: 'Press Start 2P', monospace;
+  background: #001133;
+  font-family: 'Courier New', monospace;
+  color: #ffff33;
   text-align: center;
-  overflow: hidden;
-  filter: contrast(150%) saturate(140%) brightness(120%);
+  filter: contrast(130%) brightness(120%);
 }
 
-/* ====== Canvas ====== */
+h1, h2, p {
+  text-shadow: 0 0 8px #00ffff, 0 0 4px #ff00ff;
+}
+
 canvas {
   display: block;
   margin: 10px auto;
-  background: linear-gradient(to bottom, #111 0%, #000 100%);
-  border: 6px solid #00fffc;
-  border-radius: 12px;
-  box-shadow:
-    0 0 30px #00fffc inset,
-    0 0 60px #ff00ff,
-    0 0 20px #0ff,
-    0 0 15px #fff5;
+  background: #111122;
+  border: 4px solid #00ffff;
+  box-shadow: 0 0 15px #0ff inset, 0 0 25px #0ff;
   image-rendering: pixelated;
 }
 
-/* ====== Buttons ====== */
 button {
-  padding: 12px 20px;
-  margin: 6px;
+  padding: 10px 15px;
+  margin: 5px;
   font-size: 14px;
-  font-weight: bold;
-  color: #00fffc;
-  background: rgba(0, 0, 50, 0.8);
-  border: 2px solid #00fffc;
-  border-radius: 14px;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-  text-shadow: 0 0 8px #0ff, 0 0 15px #0ff;
-  box-shadow:
-    0 0 10px #0ff,
-    0 0 20px #00fffc,
-    0 0 30px #ff00ff inset,
-    0 0 15px #fff inset;
-  transition: all 0.2s ease-in-out;
+  font-weight: bold;
+  background: linear-gradient(to bottom, #3333ff, #000066);
+  color: #fff;
+  text-shadow: 0 0 4px #0ff;
 }
 
 button:hover {
-  background: rgba(0, 0, 100, 0.9);
-  box-shadow:
-    0 0 15px #0ff,
-    0 0 25px #00fffc,
-    0 0 40px #ff00ff inset,
-    0 0 25px #fff inset;
-  transform: scale(1.05);
+  background: linear-gradient(to bottom, #5555ff, #222288);
 }
 
-/* ====== Hidden elements ====== */
-.hidden { display: none; }
-
-/* ====== Menus AERO ====== */
-#mainMenu, #settingsMenu {
-  background: rgba(10, 10, 40, 0.7);
-  backdrop-filter: blur(8px);
-  border: 2px solid #00fffc;
-  border-radius: 20px;
-  box-shadow: 0 0 20px #00fffc, 0 0 50px #ff00ff inset;
-  padding: 20px;
-  width: 450px;
-  margin: 50px auto;
-  text-align: center;
+.hidden {
+  display: none;
 }
 
-/* ====== Meteors ====== */
-.meteor {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: linear-gradient(45deg, #fff, #00fffc);
-  border-radius: 50%;
-  opacity: 0.9;
-  box-shadow: 0 0 10px #0ff, 0 0 15px #ff0;
-  animation: meteorFlash 0.3s ease-in-out infinite alternate;
-}
-
-@keyframes meteorFlash {
-  0% { transform: scale(1); opacity: 0.7; }
-  50% { transform: scale(1.5); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.7; }
-}
-
-/* ====== VERSION label ====== */
-.version-label {
-  position: absolute;
-  bottom: 5px;
-  width: 100%;
-  text-align: center;
-  color: #0ff;
+.version {
   font-size: 12px;
-  text-shadow: 0 0 5px #0ff, 0 0 10px #00fffc;
-  font-family: monospace;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff;
 }
