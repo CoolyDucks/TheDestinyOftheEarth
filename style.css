@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  background: #0b0b45;
+  color: #ff0;
+  font-family: monospace;
+  text-align: center;
+  filter: contrast(140%) saturate(130%) brightness(110%);
+}
+
+canvas {
+  display: block;
+  margin: 10px auto;
+  background: #111;
+  border: 6px solid #ff0;
+  box-shadow: 0 0 25px #ff0 inset, 0 0 20px #0ff;
+  image-rendering: pixelated;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.meteor {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: gray;
+  border-radius: 50%;
+  opacity: 0.8;
+}
