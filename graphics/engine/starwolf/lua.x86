@@ -1,0 +1,6 @@
+fastEnemyUpdate = function(enemy, dt)
+    enemy.y = enemy.y + enemy.speed*dt*1.5
+end
+fastMeteorUpdate = function(meteor, dt)
+    meteor.y = meteor.y + meteor.speed*dt*1.5
+end
